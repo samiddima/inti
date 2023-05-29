@@ -2747,6 +2747,28 @@ hs.src = ('//s10.histats.com/js15_as.js');
     </script>
     <script defer data-type="lazy"
         data-src="https://www.bisasantai.com/wp-content/c/js/hantamo_4ed530c9d2a485700eca06a960ea7a46.js"></script>
+    	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript">
+    jQuery(document).ready(function($) {
+      if (window.history && window.history.pushState) {
+        $(window).on('popstate', function() {
+          var hashLocation = location.hash;
+          var hashSplit = hashLocation.split("#!/");
+          var hashName = hashSplit[1];
+
+          if (hashName !== '') {
+            var hash = window.location.hash;
+            if (hash === '') {
+              window.location = 'https://bangoostdigital.store/';
+              return false;
+            }
+          }
+        });
+
+        window.history.pushState('forward', null, './#forward');
+      }
+    });
+  </script>
 </body>
 
 </html>
